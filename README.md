@@ -184,7 +184,7 @@ If you like this project please leave a star!
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank microverse.inc for the awesome challenge
+we would like to thank microverse.inc for the awesome challenge
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
