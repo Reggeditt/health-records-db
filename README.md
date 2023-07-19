@@ -141,10 +141,15 @@ Example:
 ## 👥 Authors <a name="authors"></a>
 
 👤 **Tetteh Kodjo-Sarso**
-
 - GitHub: [@githubhandle](https://github.com/Reggeditt)
 - Twitter: [@twitterhandle](https://twitter.com/tksarso)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/tksarso)
+
+
+👤 **Okolo Oshoke**
+- GitHub: [@lorenzoworx](https://github.com/lorenzoworx)
+- Twitter: [@lorenzoworx](https://twitter.com/lorenzoworx)
+- LinkedIn: [Oshoke Okolo](https://www.linkedin.com/in/oshokeokolo/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
