@@ -8,7 +8,7 @@ CREATE TABLE patients (
 
 CREATE TABLE medical_histories (
   id SERIAL PRIMARY KEY,
-  admitted_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  admitted_at TIMESTAMP NOT NULL,
   patient_id INTEGER NOT NULL REFERENCES patients(id),
   status VARCHAR(50)
 );
@@ -16,7 +16,7 @@ CREATE TABLE medical_histories (
 -- add join table between medical histories and treatments
 CREATE TABLE medical_chart (
   medical_history_id INTEGER NOT NULL REFERENCES medical_histories(id),
-  treatment_id INTEGER NOT NULL REFERENCES treatments(id),
+  treatment_id INTEGER NOT NULL REFERENCES treatments(id)
 );
 
 
@@ -30,7 +30,7 @@ CREATE TABLE invoices(
   id SERIAL PRIMARY KEY,
   total_amount DECIMAL,
   generated_at TiMESTAMP,
-  paid_at_timestamp DEFAULT CURRENT_TIMESTAMP,
+  paid_at timestamp,
   medical_history_id INTEGER REFERENCES medical_histories(id)
 );
 
