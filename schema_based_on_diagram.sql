@@ -12,13 +12,15 @@ CREATE TABLE medical_histories (
   patient_id INTEGER NOT NULL REFERENCES patients(id),
   status VARCHAR(50)
 );
+CREATE INDEX ON medical_histories (patient_id);
 
 -- add join table between medical histories and treatments
 CREATE TABLE medical_chart (
   medical_history_id INTEGER NOT NULL REFERENCES medical_histories(id),
   treatment_id INTEGER NOT NULL REFERENCES treatments(id)
 );
-
+CREATE INDEX ON medical_chart (treatment_id);
+CREATE INDEX ON medical_chart (medical_history_id);
 
 CREATE TABLE treatments(
   id SERIAL PRIMARY KEY,
@@ -33,6 +35,7 @@ CREATE TABLE invoices(
   paid_at timestamp,
   medical_history_id INTEGER REFERENCES medical_histories(id)
 );
+CREATE INDEX ON invoices (medical_history_id);
 
 CREATE TABLE invoice_items(
   id SERIAL PRIMARY KEY,
@@ -42,3 +45,5 @@ CREATE TABLE invoice_items(
   invoice_id INTEGER REFERENCES invoices(id),
   treatment_id INTEGER REFERENCES treatments(id)
 );
+CREATE INDEX ON invoice_items (invoice_id);
+CREATE INDEX ON invoice_items (treatment_id);
