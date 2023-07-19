@@ -23,13 +23,13 @@ CREATE TABLE invoices(
   total_amount DECIMAL,
   generated_at TiMESTAMP,
   paid_at_timestamp DEFAULT CURRENT_TIMESTAMP,
-  medical_history_id INTEGER
+  medical_history_id INTEGER REFERENCES medical_histories(id)
 );
 CREATE TABLE invoice_items(
   id SERIAL PRIMARY KEY,
   unit_price DECIMAL,
   quantity INTEGER,
   total_price DECIMAL,
-  invoice_id INTEGER,
-  treatment_id INTEGER
+  invoice_id INTEGER REFERENCES invoices(id),
+  treatment_id INTEGER REFERENCES treatments(id)
 );
